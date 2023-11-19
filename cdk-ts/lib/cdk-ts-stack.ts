@@ -14,6 +14,18 @@ export class CdkS3CloudfrontStack extends cdk.Stack {
 
     const bucket = new s3.Bucket(this, 'NodejsAwsShopReactCdkDeploy', {
       bucketName: 'nodejs-aws-shop-react-cdkdeploy-bucket',
+      cors: [
+        {
+          allowedOrigins: ["'*'"],
+          allowedHeaders: ["'*'"],
+          allowedMethods: [
+            s3.HttpMethods.GET,
+            s3.HttpMethods.PUT,
+            s3.HttpMethods.POST,
+            s3.HttpMethods.DELETE,
+          ],
+        },
+      ],
       websiteIndexDocument: 'index.html',
       publicReadAccess: false,
       autoDeleteObjects: true,
