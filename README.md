@@ -1,3 +1,9 @@
+# CDK
+Links:
+
+- [CloudFront URL](https://dj8w3sl9qe829.cloudfront.net/)
+- [S3-website](http://nodejs-aws-shop-react-cdkdeploy-bucket.s3-website-us-east-1.amazonaws.com)
+
 # React-shop-cloudfront
 
 This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:
@@ -36,3 +42,7 @@ Runs tests in console, in browser or with coverage.
 ### `lint`, `prettier`
 
 Runs linting and formatting for all files in `src` folder.
+
+### `cloudfront:deploy`
+
+Deploys FE app into an AWS S3 bucket.
